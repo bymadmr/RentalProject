@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface ICarDal: IEntityRepository<Car>
+    public interface IBrandDal:IEntityRepository<Brand>
     {
-        List<Car> GetCarsByBrandId(int BrandId);
-        List<Car> GetCarsByColorId(int ColorId);
     }
 }
