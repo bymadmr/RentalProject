@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfCarDal : EfEntitiyRepositoryBase<Car, RentalDbContext>, ICarDal
+    public class EfCarDal : EfEntityRepositoryBase<Car, RentalDbContext>, ICarDal
     {
         public List<CarDetailDTO> GetCarDetails()
         {

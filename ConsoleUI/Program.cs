@@ -12,12 +12,9 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
             CarManager carManager = new CarManager(new EfCarDal());
-
-
-            foreach (var cars in carManager.GetCarDetails())
-            {
-                Console.WriteLine(cars.CarName +"  "+cars.ColorName);
-            }
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            var result = rentalManager.Add(new Rental { CarId = 2, CustomerId = 2, RentDate = DateTime.Now.AddDays(-2),ReturnDate=null});
+            Console.WriteLine(result.Message);
         }
     }
 }
